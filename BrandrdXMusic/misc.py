@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from BrandrdXMusic.core.mongo import mongodb
+from BrandrdXMusic.core.mongo import pymongodb
 
 from .logging import LOGGER
 
