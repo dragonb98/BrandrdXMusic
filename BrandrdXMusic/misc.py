@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from BrandrdXMusic.core.mongo import pymongodb
+from BrandrdXMusic.core.mongo import mongodb
 
 from .logging import LOGGER
 
@@ -58,7 +58,7 @@ async def sudo():
     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
-    LOGGER(__name__).info(f"𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.")
+    LOGGER(__name__).info(f"Sudo users loaded...")
 
 
 def heroku():
@@ -71,5 +71,7 @@ def heroku():
                 LOGGER(__name__).info(f"Heroku app name loaded...")
             except BaseException:
                 LOGGER(__name__).warning(
+                    f"Please make sure your Heroku API Key and Your App name are configured correctly in the heroku."
+                )
                     f"Please make sure your Heroku API Key and Your App name are configured correctly in the heroku."
                 )
