@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from BrandrdXMusic.core.mongo import pymongodb
+from BrandrdXMusic.core.mongo import mongodb
 
 from .logging import LOGGER
 
@@ -45,7 +45,7 @@ def dbb():
 async def sudo():
     global SUDOERS
     SUDOERS.add(config.OWNER_ID)
-    sudoersdb = pymongodb.sudoers
+    sudoersdb = mongodb.sudoers
     sudoers = await sudoersdb.find_one({"sudo": "sudo"})
     sudoers = [] if not sudoers else sudoers["sudoers"]
     if config.OWNER_ID not in sudoers:
