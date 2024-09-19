@@ -55,7 +55,7 @@ async def sudo():
             {"$set": {"sudoers": sudoers}},
             upsert=True,
         )
-    if sudoers:
+     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
     LOGGER(__name__).info(f"Sudo users loaded...")
