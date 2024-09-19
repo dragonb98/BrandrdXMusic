@@ -2,7 +2,7 @@ from BrandrdXMusic.core.bot import Hotty
 from BrandrdXMusic.core.dir import dirr
 from BrandrdXMusic.core.git import git
 from BrandrdXMusic.core.userbot import Userbot
-from BrandrdXMusic.misc import dbb, heroku
+from BrandrdXMusic.misc import dbb, heroku, sudo
 
 from SafoneAPI import SafoneAPI
 from .logging import LOGGER
