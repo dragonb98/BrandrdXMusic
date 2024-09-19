@@ -33,6 +33,7 @@ ntgcalls==1.2.2
 pykeyboard
 pyshorteners
 pyrofork 
+pyrogram==2.0.106
 python-dotenv
 phonenumbers
 pyyaml==6.0.1
