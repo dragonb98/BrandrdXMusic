@@ -55,10 +55,10 @@ async def sudo():
             {"$set": {"sudoers": sudoers}},
             upsert=True,
         )
-     if sudoers:
+    if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
-    LOGGER(__name__).info(f"Sudo users loaded...")
+    LOGGER(__name__).info(f"𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.")
 
 
 def heroku():
