@@ -52,9 +52,9 @@ async def sudo():
         sudoers.append(config.OWNER_ID)
         await sudoersdb.update_one(
             {"sudo": "sudo"},
-            {"$set": {"sudoers": sudoers}},
-            upsert=True,
-        )
+                    {"$set": {"sudoers": sudoers}},
+                    upsert=True,
+            )
     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
